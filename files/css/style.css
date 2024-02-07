@@ -1,0 +1,142 @@
+body {
+    background-color: #01183e;
+}
+
+.top-container {
+    display: flex;
+    height: 20%;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.gradient-background {
+    background: linear-gradient(300deg, #0e0687, #4b03be, #054ba1);
+    background-size: 180% 180%;
+    animation: gradient-animation 3s ease infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+
+.self-container {
+    display: grid;
+    width: 60%;
+    height: 100%;
+    justify-items: center;
+}
+
+.self-image {
+    margin-top: 2rem;
+    border-radius: 50%;
+    border: 2px solid azure;
+}
+
+.self-text {
+    font-family: "Noto Sans";
+    color: white;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.double-container {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.container-element {
+    flex-basis: 35%;
+    background-color: rgb(6, 55, 96);
+    border-radius: 2rem;
+    border: 2px solid azure;
+}
+
+.header {
+    font-family: "Kanit";
+    color:azure;
+}
+
+.skill {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.single-element {
+    text-align: center;
+    background-color: rgb(5, 11, 58);
+    width: 50%;
+    border-radius: 2rem;
+    border: 2px solid azure;
+    padding: 1rem;
+}
+
+li {
+    list-style-type: square;
+    list-style-position: inside;
+    margin-bottom: 10px;
+}
+
+.main {
+    text-align: center;
+    font-size: 20px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+    background-color:rgb(5, 39, 79);
+}
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.paragraph {
+    text-align: justify;
+}
+
+.hover {
+    font-weight:bold;
+    font-size: 1.2rem;
+    background-color: rgb(132, 0, 255);
+}
+
+.hidden-text {
+    color: rgb(6, 55, 96);
+}
+
+.hidden-toggle {
+    color:aquamarine;
+}
+
+@media (max-width: 800px) {
+    .top-container {
+        margin-bottom: 3rem;
+    }
+
+    .double-container {
+        flex-direction: column;
+    }
+    .container-element {
+        margin-bottom: 3rem;
+    }
+
+    .single-element {
+        width: 80%;
+    }
+}

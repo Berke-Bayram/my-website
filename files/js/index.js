@@ -1,22 +1,21 @@
-divs = document.querySelectorAll('.js-element');
-hiddenElement = document.querySelector('.hidden-text');
+$(document).ready(function() { 
+    $(".js-element").hover(
+        function() {
+            $(this).addClass("hover");
+        },
+        function() {
+            $(this).removeClass("hover");
+        }
+    );
 
-for (let i = 0; i < divs.length; i++) {
-    divs[i].addEventListener('mouseenter', function() {
-        divAnimation(this);
-        if (i === 1) {
-            hiddenElement.classList.toggle('hidden-toggle');
-        } 
-    });
+    $(".hobbies").hover(
+        function() {
+            $(".hidden-text").addClass("hidden-toggle");
+        },
+        function() {
+            $(".hidden-text").removeClass("hidden-toggle");
+        }
+    );
+})
 
-    divs[i].addEventListener('mouseleave', function() {
-        divAnimation(this);
-        if (i === 1) {
-            hiddenElement.classList.toggle('hidden-toggle');
-        } 
-    });
-}
 
-function divAnimation(activeDiv) {
-    activeDiv.classList.toggle('hover');
-}

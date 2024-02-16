@@ -28,32 +28,4 @@ To run this project locally, follow these steps:
 1. Clone this repository to your local machine.
 2. Open the `index.html` file in your preferred web browser.
 
-## JavaScript
 
-The JavaScript file (`index.js`) includes the following functionality:
-- Event listeners are added to elements with the class `.js-element` to trigger animations on mouseenter and mouseleave.
-- When hovering over the second `.js-element`, a hidden text element with the class `.hidden-text` is toggled to reveal hidden content.
-
-```javascript
-divs = document.querySelectorAll('.js-element');
-hiddenElement = document.querySelector('.hidden-text');
-
-for (let i = 0; i < divs.length; i++) {
-    divs[i].addEventListener('mouseenter', function() {
-        divAnimation(this);
-        if (i === 1) {
-            hiddenElement.classList.toggle('hidden-toggle');
-        } 
-    });
-
-    divs[i].addEventListener('mouseleave', function() {
-        divAnimation(this);
-        if (i === 1) {
-            hiddenElement.classList.toggle('hidden-toggle');
-        } 
-    });
-}
-
-function divAnimation(activeDiv) {
-    activeDiv.classList.toggle('hover');
-}
